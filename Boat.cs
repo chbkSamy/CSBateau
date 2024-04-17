@@ -22,6 +22,7 @@ public class Boat
         if (passenger == 0)
         {
             Console.WriteLine("Le bateau ne peut pas partir vide !");
+            Embarquement();
         }
         else if (passenger <= Place && passenger > 0)
         {
@@ -30,10 +31,20 @@ public class Boat
         else
         {
             Console.WriteLine("Désolé, nous n'avons pas assez de place !");
+            break;
         }
     }
 
-    public void AfficherInventaire()
+    public void StartEngine(){
+        Embarquement();
+        console.WriteLine("TCHHH TCHHH TCHHH !!!");
+        console.WriteLine("TCHHH TCHHH TCHHH !!!");
+        console.WriteLine("TCHHH TCHHH TCHHH !!!");
+        console.WriteLine("Nous sommes arrivé a destination, nous allons tout d'abord verifier l'inventaire");
+        VerifInventaire();
+    }
+
+    public void VerifInventaire()
     {
         foreach (var tache in InvList)
         {
