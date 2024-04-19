@@ -26,21 +26,26 @@ public class Boat
         }
         else if (passenger <= Place && passenger > 0)
         {
-            Console.WriteLine("Allons-y !");
+            Console.WriteLine("Nous allons procéder à l'enregistrement des passagers.");
+            Console.WriteLine("*");
+            Console.WriteLine("**");
+            Console.WriteLine("***");
+            PrezInventaire();
         }
         else
         {
             Console.WriteLine("Désolé, nous n'avons pas assez de place !");
-            break;
         }
     }
 
-    public void StartEngine(){
+    public void StartEngine()
+    {
         Embarquement();
-        console.WriteLine("TCHHH TCHHH TCHHH !!!");
-        console.WriteLine("TCHHH TCHHH TCHHH !!!");
-        console.WriteLine("TCHHH TCHHH TCHHH !!!");
-        console.WriteLine("Nous sommes arrivé a destination, nous allons tout d'abord verifier l'inventaire");
+        Console.WriteLine("C'est bon ! Allons-y !");
+        Console.WriteLine("TCHHH TCHHH TCHHH !!!");
+        Console.WriteLine("TCHHH TCHHH TCHHH !!!");
+        Console.WriteLine("TCHHH TCHHH TCHHH !!!");
+        Console.WriteLine("J'éspere que votre balade fut agréable, avant de débarquer, nous allons tout d'abord vérifier l'inventaire");
         VerifInventaire();
     }
 
@@ -48,22 +53,33 @@ public class Boat
     {
         foreach (var tache in InvList)
         {
-           Console.WriteLine($"Est-ce que tu as réaliser la tache suivante : {tache.Question} ? (o : OUI | n : NON)");
+            Console.WriteLine($"Est-ce que l'objet  suivante est présent : {tache.Question} ? (o : OUI | n : NON)");
             var respone = Console.ReadLine();
             if (respone == "o" || respone == "O")
             {
                 tache.isdone = true;
             }
-            else {
+            else
+            {
                 break;
             }
+        }
+    }
+
+    public void PrezInventaire()
+    {
+        Console.WriteLine("Avant de demarer, voici l'inventaire des objets se trouvant dans le bateau, ils doivent être présents au retour :");
+
+        foreach (var tache in InvList)
+        {
+            Console.WriteLine($" {tache.Question}");
         }
     }
 
     public virtual void Inventaire()
     {
         InvList.Enqueue(new Inv("les extincteurs"));
-        InvList.Enqueue(new Inv("les boués de sauvetage"));
+        InvList.Enqueue(new Inv("les bouées de sauvetage"));
         InvList.Enqueue(new Inv("les gilets de sauvetage"));
     }
 }
