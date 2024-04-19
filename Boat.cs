@@ -78,8 +78,8 @@ public class Boat
 
     public virtual void Inventaire()
     {
-        InvList.Enqueue(new Inv("les extincteurs"));
-        InvList.Enqueue(new Inv("les bouées de sauvetage"));
-        InvList.Enqueue(new Inv("les gilets de sauvetage"));
+        InvList.Enqueue(new Inv(" extincteurs"));
+        InvList.Enqueue(new Inv(" bouées de sauvetage"));
+        InvList.Enqueue(new Inv(" gilets de sauvetage"));
     }
 }
