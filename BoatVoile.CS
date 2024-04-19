@@ -1,7 +1,8 @@
 public class BoatVoile : Boat
 {
    public override void Inventaire(){
-    base.InvList.Enqueue("Voile de rechange");
-    base.InvList.Enqueue("corde");
+    base.InvList.Enqueue(new Inv(" Voile de rechange"));
+    base.InvList.Enqueue(new Inv(" corde"));
+
    }
 }
