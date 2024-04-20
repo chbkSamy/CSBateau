@@ -26,22 +26,25 @@ public class Boat
         }
         else if (passenger <= Place && passenger > 0)
         {
-            Console.WriteLine("Nous allons procéder à l'enregistrement des passagers.");
+            Console.WriteLine("\nNous allons procéder à l'enregistrement des passagers.");
             Console.WriteLine("*");
             Console.WriteLine("**");
             Console.WriteLine("***");
             PrezInventaire();
+            StartEngine();
+
+
         }
         else
         {
-            Console.WriteLine("Désolé, nous n'avons pas assez de place !");
+            Console.WriteLine("Désolé, nous n'avons pas assez de place ! Veuillez selectionner un autre bateau.");
+
         }
     }
 
     public void StartEngine()
     {
-        Embarquement();
-        Console.WriteLine("C'est bon ! Allons-y !");
+        Console.WriteLine("\nC'est bon ! Allons-y !");
         Console.WriteLine("TCHHH TCHHH TCHHH !!!");
         Console.WriteLine("TCHHH TCHHH TCHHH !!!");
         Console.WriteLine("TCHHH TCHHH TCHHH !!!");
@@ -61,6 +64,7 @@ public class Boat
             }
             else
             {
+                Console.WriteLine("Il y a un objet manquant ! Veuillez vous rapprocher de l'acceuil pour le rembourser.");
                 break;
             }
         }
